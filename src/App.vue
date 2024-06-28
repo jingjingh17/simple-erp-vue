@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view /> <!-- 路由视图，用于显示当前路由对应的组件内容 -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
+  // 组件中的逻辑部分，可以在这里处理组件的生命周期钩子等
   components: {
-    HelloWorld
+    
+  },
+  created() {
+    // 可以在这里处理一些全局的初始化逻辑
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app{
+  height: 100%;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 </style>
